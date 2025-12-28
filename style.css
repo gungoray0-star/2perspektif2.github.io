@@ -1,0 +1,176 @@
+/* --- style.css (SON VE EKSİKSİZ) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: white;
+    padding-bottom: 50px;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* NAVBAR */
+nav {
+    background: rgba(2, 6, 23, 0.95);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1e293b;
+    backdrop-filter: blur(10px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo-box {
+    background: linear-gradient(135deg, cyan, blue);
+    color: black;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.menu li a {
+    padding: 8px 15px;
+    display: block;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.menu li a:hover, .menu li a.active {
+    background: cyan;
+    color: #0f172a;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.btn-abone {
+    background: linear-gradient(90deg, cyan, #005f73);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-abone:hover { transform: scale(1.05); }
+
+/* HERO (VİDEO) */
+.hero {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 4px solid cyan;
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.hero h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    margin: 0;
+}
+.hero span { color: cyan; }
+
+/* GENEL SAYFA YAPISI */
+.page-header {
+    background: linear-gradient(to right, #020617, #1e293b);
+    padding: 40px 10%;
+    border-bottom: 2px solid cyan;
+    margin-bottom: 30px;
+}
+.page-header h2 { font-size: 2.5rem; color: cyan; }
+
+.container { padding: 20px 10%; }
+.cards { display: flex; gap: 25px; flex-wrap: wrap; justify-content: center; margin-top:20px; }
+
+.card {
+    background: #1e293b;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.card:hover { transform: translateY(-10px); border-color: cyan; box-shadow: 0 10px 30px rgba(0,255,255,0.2); }
+.card img { width: 100%; height: 200px; object-fit: cover; background:#333; }
+.card-content { padding: 20px; }
+.card h3 { margin-bottom: 10px; font-size: 1.2rem; }
+.card p { font-size: 0.9rem; color: #94a3b8; }
+
+/* TABLOLAR */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #334155; }
+th { background: #020617; color: cyan; text-transform: uppercase; }
+tr:hover { background: #334155; }
+
+/* REKOR KUTUSU (Diğer sayfalardaki küçük kutu) */
+.record-box {
+    display: flex; align-items: center; gap: 20px;
+    background: linear-gradient(90deg, #0f172a, #334155);
+    padding: 25px; border-radius: 15px; border-left: 5px solid cyan; margin-bottom: 40px;
+}
+.record-icon { font-size: 3rem; }
+.record-box h4 { color: cyan; font-size: 1.3rem; margin-bottom: 5px; }
+
+/* REKORLAR SAYFASI ÖZEL (ALTIN) */
+.gold-border { border-color: #d4af37 !important; }
+.gold-text { color: #d4af37 !important; }
+.gold-card { border: 1px solid #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.2); }
+.rank-badge {
+    background: #d4af37; color: black; padding: 5px 10px;
+    border-radius: 5px; font-weight: bold; position: absolute; top: 10px; right: 10px; font-size: 12px;
+}
+
+/* FOOTER */
+footer { text-align: center; padding: 40px; margin-top: 50px; background: #020617; border-top: 1px solid #1e293b; color: #64748b; }
